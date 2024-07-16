@@ -10,8 +10,20 @@ public class Utente {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_user;
-	private String username, email, password, recenti, salvati;
+	private String name, lastName, username, email, password, recenti, salvati;
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	public Long getId_user() {
 		return id_user;
 	}

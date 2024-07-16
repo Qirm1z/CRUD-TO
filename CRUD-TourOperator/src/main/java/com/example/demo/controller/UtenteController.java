@@ -37,7 +37,6 @@ public class UtenteController {
 	public Utente updateUtente(@PathVariable Long Id, @RequestBody Utente utenteDetails) {
 		Utente utente = utenteRepository.findById(Id).orElseThrow(() -> new ResourceNotFoundException("User not found"));
 		
-		utente.setName(utenteDetails.getName());
 		
 		return utenteRepository.save(utente);
 	}
